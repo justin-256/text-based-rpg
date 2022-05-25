@@ -80,16 +80,17 @@ table_move = "You take position on the side of the table, and you slide it along
 #################################################
 
 notebook_look = "a notebook"
-notebook_moved = "among which is an old notebook. "
-notebook_examine = "The notebook is old and tattered near the edges. Upon closer inspection you discover that it belonged to a young Cecil H. Thomas, the Chairman of Westman Enterprises. The notebook has a metal spiral spine, holding together scribbles and notes, telling the story of a man pulled from fame down a deep dark rabbit hole by his own obsession and inner greed."
-notebook_examine_moved = "Would you look at that, the notebook is 3 inches from where you found it."
+notebook_moved = "a notebook "
+notebook_examine = "The notebook is old and tattered near the edges. The cover is blank."
+notebook_examine_moved = "Would you look at that, the notebook is 3 inches from where you found it. The notebook is old and tattered near the edges. The cover is blank."
 notebook_take = "You decide to take it along with you, after all, the writings of a man who went missing 3 years ago might fetch a high price on Gregslist."
 notebook_move = "You slide the notebook to the right of where it previously was, although it’s difficult to determine why."
+notebook_pgs = ["Day 1 - I’ve been learning more and more about this Kahmun fellow. He seems to be quite a prestigious figure within the culture. I’ll keep you posted as I find out more. - Cecil H. Thomas", "day 55 - i cant stop reading abut him hes all i think about i cant get him out he knows what im doing. ~Cecel h tomas", "Day 142 - he found me getoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetoutgetout -IDONTKNOW", "page4"]
 
 #################################################
 
 fountain_pen_look = "a fountain pen"
-fountain_pen_moved = "A pen lays close to the edge, "
+fountain_pen_moved = "a fountain pen"
 fountain_pen_examine = "The pen is of quite high quality, with gold plated linings near the tip. Part of you feels inadequate to hold something of this precious kind, but its beauty is somewhat degraded by the dust and mold settled upon the sleek curves. "
 fountain_pen_examine_moved = "The pen looks slightly less satisfying when it’s not parallel to the notebook."
 fountain_pen_take = "You put it in your back pocket, a pawn shop might give a kidney for something like this."
@@ -148,9 +149,6 @@ note_examine_moved = ""
 note_move = ""
 note_take = ""
 note_pull = ""
-
-
-book_pgs = ["page1", "page2", "page3", "page4"]
 
 stream_death = "The current is strong, and it sweeps you up by your feet and drags you across the rocks. You try to grab them but you are going too fast to get a hold. It finally pulls you under and you are unable to breathe."
 
