@@ -249,10 +249,15 @@ def play(arg): #play an item
         return
         arg = arg.replace(" ", "")
 
-    if piano.played == True:
+    elif piano.played == True:
         print("You already played it!")
         return
-        
+
+    print("Are you sure you want to play the notes \"{}\"? (y/n)".format(arg))
+    action = input("\n> ").lower() #player input
+    if action == "n": 
+        return
+    
     if arg == "adbg":
         piano.played(True)
         print(textwrap.fill(text.piano_notes_correct, width))
@@ -488,8 +493,21 @@ while __name__ == "__main__": ########## START OF MAIN PROGRAM ##########
     #setup for the main loop:
     look()
     
-    commands = ("north", "south", "east", "west", "n", "s", "e", "w", "help", "inventory", "i", "quit", "look", "l", "examine", "move", "play", "pull", "take", "put", "turn", "open", "close", "read")
-    movements = ("north", "south", "east", "west", "n", "s", "e", "w")
+    commands = ("north", "south", "east", "west", "n", "s", "e", "w", "up", "down", "left", "right",
+                "help", "quit",
+                "inventory", "i", 
+                "look", "l", 
+                "examine", "inspect",
+                "move", "slide",
+                "play", 
+                "pull", "tug",
+                "take", "grab",
+                "put", "place",
+                "turn", 
+                "open", 
+                "close", 
+                "read")
+    movements = ("north", "south", "east", "west", "n", "s", "e", "w", "up", "down", "left", "right")
     
     # main loop:
     while game_running == True:
@@ -501,7 +519,6 @@ while __name__ == "__main__": ########## START OF MAIN PROGRAM ##########
         updatemap() #update the map 
         
         action = input("\n> ").lower().split() #player input
-
         # single argument commands
         if len(action) <= 0:
             print("Please input something!")
@@ -537,13 +554,13 @@ while __name__ == "__main__": ########## START OF MAIN PROGRAM ##########
         
         # multi argument commands
         arg = " ".join(action[1:])
-        if action[0] == "examine": 
+        if action[0] in ["examine", "inspect"]: 
             examine(arg)
             
-        elif action[0] == "move":  
+        elif action[0] in ["move", "slide"]:  
             move(arg)
             
-        elif action[0] == "pull": 
+        elif action[0] in ["pull", "tug"]: 
             pull(arg)
             
         elif action[0] == "play":  
@@ -556,10 +573,10 @@ while __name__ == "__main__": ########## START OF MAIN PROGRAM ##########
         	print("Missing argument!")
         	continue
     		
-        elif action[0] == "take": 
+        elif action[0] in ["take", "grab"]: 
             take(arg)
     
-        elif action[0] == "put": 
+        elif action[0] in ["put", "place"]: 
             command = action[0]
             if "in" in action:
                 x = action.index("in")

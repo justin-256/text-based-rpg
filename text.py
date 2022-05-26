@@ -31,7 +31,9 @@ look_10_12_0 = ""
 
 bookshelf_look = "To your east is a bookshelf which reaches all the way up to the ceiling. "
 bookshelf_moved = "To your east is a bookshelf reaching all the way up to the ceiling which has been slid to the left revealing a dark passage. "
-bookshelf_examine_moved = "examine move bookshelfkg"
+bookshelf_examine = "You walk up to the bookshelf and take a good look at the plethora of literature before you. "
+
+bookshelf_examine_moved = "You walk up to the bookshelf and take a good look at the plethora of literature before you. A dustless book has been pulled out and the bookshelf is slid over. "
 bookshelf_take = "You bear hug the bookshelf and pull with all your might. It doesn’t budge."
 bookshelf_move = "You push on the bookshelf from its side, it shouldn’t be nearly this heavy, so why is it?"
 bookshelf_pull = "You pull hard on the bookshelf, but it won't budge. It must beattached to the wall."
@@ -40,6 +42,9 @@ book_pull = "You pull the dustless book out from the shelf by giving the top of 
 
 book_move = "There is no room to move any of the books! "
 book_take = "It seems that the books are glued to the bookshelf, why would this be?"
+book_examine = "The books are lined incredibly neatly and all look similar. They are allquite dusty."
+book_examine_moved = "A book has been pulled out, causing the bookshelf to slide. There is no dust on the spine."
+
 
 bookshelf_close = {0:"You walk through the entrance and stare into the darkness. After taking a step forward there is a click from under your feet as one of the stones gets pressed in. You hear a rolling noise behind you as the passage gets pitch dark. You turn around quickly to find that the bookshelf has slid back. You are in complete darkness. You hear a man say \"I thought you would try to escape!\" behind you and then the floor folds down. You fall into a very damp chamber made out of concrete. The hatch clicks shut. You are locked in.", 
                    1:"You walk through the entrance and stare into the darkness. After taking a step forward there is a click from under your feet as one of the stones gets pressed in. You hear a rolling noise behind you as the passage darkens. You turn around quickly to find that the bookshelf has slid back. You hear footsteps behind you and when you look, you see a man in all black walking with purpose towards you. \"I thought you would try to escape!\" Before you can react he pulls a small lever on the wall and then the floor collapses below you. You fall into a very damp chamber made out of concrete. The hatch clicks shut. You are locked in." 
@@ -61,7 +66,6 @@ piano_notes_incorrect_art = ""
 
 piano_notes_correct = "You hear the melody you just played repeat and even become louder and more eloquent. A rather small fellow emerges from a small door in the piano you hadn’t noticed before, he points across the room to seemingly nothing important."
 
-bookshelf_examine = "You walk up to the bookshelf and take a good look at the plethora of literature before you. "
 piano_examine = "You walk over to the piano, and the wooden siding on the front of the case has something engraved into it, you blow away the dust in order to see it better, and it has the numbers 1, 4, 2, 7 on it. You look down and see the keys have the remains of some painted letters on them, A through G in specific. [HINT: Use play followed by notes!]"
 bookshelf_examine_piano_played = "You walk up to the bookshelf and take a good look at the plethora of literature before you. As you’re scanning over the books for possible clues, you spot a book with less dust on it than the others. "
 piano_examine_played = "You see a small open door on the front of the piano with a small man with flaking paint pointing across the room to the bookshelf, but nothing that looks out of the ordinary"

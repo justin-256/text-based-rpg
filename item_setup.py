@@ -42,6 +42,7 @@ class Object:
             if action == "pull":
                 print(textwrap.fill(text.book_pull, width))
                 bookshelf.has_moved = True
+                book.has_moved = True
     
 class Container(Object): #container class
     def __init__(self, description, moved_description, examine_description, examine_description_moved, move, take, pull, can_move, can_take, can_pull, name, contents, open, can_open, see_contents):
@@ -143,6 +144,6 @@ piano = Piano(text.piano_look, text.piano_moved, text.piano_examine, text.piano_
 
 lantern = Light(text.lantern_look, text.lantern_moved, text.lantern_examine, text.lantern_examine_moved, text.lantern_move, text.lantern_take, "", can_move = True, can_take = True, can_pull = False, name = "lantern", current_status = False, on_level = 2)
 
-book = Object("", "", "", "", text.book_move, text.book_take, "", can_move = False, can_take = False, can_pull = True, name = "book")
+book = Object("", "", text.book_examine, text.book_examine_moved, text.book_move, text.book_take, "", can_move = False, can_take = False, can_pull = True, name = "book")
 
 grate = Object(text.grate_look, text.grate_moved, text.grate_examine, text.grate_examine_moved, text.grate_move, text.grate_take, text.grate_pull, can_move = False, can_take = True, can_pull = True, name = "grate")
