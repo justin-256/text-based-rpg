@@ -211,4 +211,4 @@ Arguments that start with:
 |read [item]              | Read piece of literature       |
 
 ## Next time:
-I do plan on doing this again some time, and when I do there are lots of things I would change. I would plan things out better and organise things nicer. I would also make EVERYTHING an object in a class, so for example, you could examine the river or the log. I could even make rooms and the player a sub class of the container class.
+I do plan on doing this again some time, and when I do there are lots of things I would change. I would plan things out better and organise things nicer. I would also make EVERYTHING an object in a class, so for example, you could examine the river or the log. I could even make rooms and the player a sub class of the container class. I would also add different endings and paths, rather than restricting the player to one trail. I may add in food, hunger and health along with fighting.
