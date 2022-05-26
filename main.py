@@ -5,7 +5,8 @@ html (which I am not that great at, but managed to make my own personal website 
 I highly encourage you to try playing the game rather than looking through the code first! This 
 took me a long time to make and I am happy with how it has ended up. There are a lot of things which 
 I would like to add but could not do with the time given and my current knowlege. For a list of variables 
-and more info on how this program works, please visit the README.md file. (if I get that done lol (UPDATE: I DID! wow look at me, finally documenting stuff.))
+and more info on how this program works, please visit the README.md file. (if I get that done
+lol (UPDATE: I DID! wow look at me, finally documenting stuff.))
 
 Enjoy!!!
 -Justin
@@ -13,7 +14,7 @@ Enjoy!!!
 import text #import stuff
 import textwrap
 import time
-from item_setup import Light, Literature, Container, book, bookshelf, chair, fountain_pen, grate, inkwell, lamp, lantern, notebook, piano, table #, Piano, Object - Not needed (yet :))
+from item_setup import Light, Literature, Container, book, bookshelf, chair, fountain_pen, grate, inkwell, lamp, lantern, notebook, piano, table #, Piano, Object - Not needed (yet :) )
 from options import width, developer_mode, game_running, player_location  
 
 inventory = [] #setup player inventory
@@ -69,19 +70,64 @@ class Location:
         self.title = title
         self.print_look = print_look
 ########## INITIALIZE MAP ##########
-def updatemap(): #probably do not need this in a function
+def updatemap(): #Better if it could automatically update the variables. only assigns them once, thats why it is in a function. to run it more!
     global locations
 
-    locations = {
-    "1,1,1":Location(False, False, bookshelf.has_moved, False, [], [], [3,1,1], [], "", "", "", "", 0, text.main_room_look, "Main Room"),
-    "3,1,1":Location(False, False, False, False, [], [], [], [], "", "", "", "", 0, text.staircase_look, "Staircase"),
-    "3,1,0":Location(False, grate.been_pulled, False, False, [], [3,4,0], [], [], "", "You crawl through the grate", "", "", 6, text.concrete_room_look, "Concrete Chamber"), 
-    "3,4,0":Location(grate.been_pulled, True, True, False, [3,1,0], [6,7,0], [8,4,0], [], "", "", "", "", 10, text.look_3_4_0, "North Of Stream", print_look = True),
-    "8,4,0":Location(False, True, True, True, [], [9,8,0], [13,2,0], [3,4,0], "", "", "", "", 10, text.look_8_4_0, "North Of Stream", print_look = True),
-    "13,2,0":Location(False, True, True, True, [], [6,7,0], [6,7,0], [8,4,0], "", "", "", "", 10, text.look_13_2_0, "On Tree Trunk", print_look = True),
-    "9,8,0":Location(True, True, True, True, [8,4,0], [10,12,0], [6,7,0], [6,7,0], "", "", "", "", 10, text.look_9_8_0, "Tree Trunk", print_look = True),
-    "6,7,0":Location(False, False, False, False, [], [], [], [], "", "", "", "", 10, "", "Inside Stream", print_look = True),
-    "10,12,0":Location(False, False, False, False, [], [], [], [], "", "", "", "", 10, "", "Forest", print_look = False),
+    locations = { #set up the locations
+    '1,1,1': Location(
+        False, False, bookshelf.has_moved, False,
+        [], [], [3, 1, 1], [],
+        '', '', '', '',
+        0, text.main_room_look, 'Main Room'),
+    
+    '3,1,1': Location(
+        False, False, False, False,
+        [], [], [], [],
+        '', '', '', '',
+        0, text.staircase_look, 'Staircase'),
+    
+    '3,1,0': Location(
+        False, grate.been_pulled, False, False,
+        [], [3, 4, 0], [], [],
+        '', 'You crawl through the grate', '', '',
+        6, text.concrete_room_look, 'Concrete Chamber'),
+    
+    '3,4,0': Location(
+        grate.been_pulled, True, True, False,
+        [3, 1, 0], [6, 7, 0], [8, 4, 0], [],
+        '', '', '', '',
+        10,
+        text.look_3_4_0, 'North Of Stream', print_look=True),
+    
+    '8,4,0': Location(
+        False, True, True, True,
+        [], [9, 8, 0], [13, 2, 0], [3, 4, 0],
+        '', '', '', '',
+        10, text.look_8_4_0, 'North Of Stream', print_look=True),
+    
+    '13,2,0': Location(
+        False, True, True, True,
+        [], [6, 7, 0], [6, 7, 0], [8, 4, 0],
+        '', '', '', '',
+        10, text.look_13_2_0, 'On Tree Trunk', print_look=True),
+    
+    '9,8,0': Location(
+        True, True, True, True,
+        [8, 4, 0], [10, 12, 0], [6, 7, 0], [6, 7, 0],
+        '', '', '', '',
+        10, text.look_9_8_0, 'Tree Trunk', print_look=True),
+    
+    '6,7,0': Location(
+        False, False, False, False,
+        [], [], [], [],
+        '', '', '', '',
+        10, '', 'Inside Stream', print_look=True),
+    
+    '10,12,0': Location(
+        False, False, False, False,
+        [], [], [], [],
+        '', '', '', '',
+        10, '', 'Forest', print_look=False),
     }
 
 updatemap()
@@ -89,6 +135,7 @@ updatemap()
 ########## DEFINE ACTIONS AND OTHER FUNCTIONS ##########
 def locstr(): #this was repeated a lot so I made a function
     return ",".join(str(i) for i in player_location) + "," + str(z) 
+
 def lightlevel(): #return light level of current location
     total_light = 0
     total_light += locations[locstr()].light
@@ -97,6 +144,7 @@ def lightlevel(): #return light level of current location
             if i.current_status == True:
                 total_light += i.on_level
     return total_light
+
 def game_end(cause):
     global game_running
     deathcauses = {"piano":text.piano_death, "stream":text.stream_death}
@@ -125,6 +173,7 @@ def trigger(cause): #trigger code if player is in certain place
 def helptxt():
     for i in text.helplist:
         print(textwrap.fill(i, width))
+
 def printinv(): #print inventory contents
     if len(inventory) == 0:
         print(textwrap.fill("Your inventory is currently empty! To pick things up, use the [take] command.", width))
@@ -218,7 +267,6 @@ def play(arg): #play an item
         if width >= 40:
             print(text.piano_notes_incorrect_art)
         game_end("piano")
-        
 
 def pull(item): #pull an item
     if lightlevel() <= 0:
@@ -298,6 +346,7 @@ def navigation(direction): #move around n s w or w
     updatemap()
     if locations[locstr()].print_look == True:
         look()
+
 def take(item):  #take an item and put it in inventory
     if lightlevel() <= 0:
         print(textwrap.fill("you are unable to see anything in the dark!", width))
@@ -358,7 +407,6 @@ def activate(action, item): #activate item such as light and turn it on/off
                 return
     print(textwrap.fill("You do not have that item anywhere near you.", width))
 
-
 def openclose(item, action):
     for i in objects_currentloc + inventory:
         if i.name == item:
@@ -411,8 +459,7 @@ def end():
     print(textwrap.fill("I do not have enough time to go any further. I hope you enjoyed my first proper Python program. I know it may not be the most complicated or even hard to beat game made with python, but I am happy with how it came out. If I could change stuff, I would make it more challenging with a better story, and also try to use classes more. I would like to add some way of fighting and health scores. I may do this on my own time in the future, but for now this is all I have. Thanks to my friend Jayden for helping with the text the program prints out, I really suck at stories! :P", width))
     print("- Justin")
 
-########## MAIN ##########
-while __name__ == "__main__":
+while __name__ == "__main__": ########## START OF MAIN PROGRAM ##########
     while player_location == ["menu"]:
         home_restart = False
         print(text.logo)

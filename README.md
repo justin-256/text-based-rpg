@@ -24,7 +24,7 @@ The program asks the user for a command and then cycles through, checking if it 
 |Function:                |Description:                                                                           |
 |-------------------------|---------------------------------------------------------------------------------------|
 |`update_objs()          `|Updates objects and sets up the `objects_currentloc` list                              |
-|`updatemap()            `|Updates the map locations (probbly could just remove the function, probably not needed)|
+|`updatemap()            `|Updates the map locations because variables only get defined once                      |
 |`locstr()               `|Returns the current coordinates in string form, used in other functions                |
 |`lightlevel()           `|Returns light level of the current location                                            |
 |`game_end(cause)        `|Ends the game and prints message depending on `cause`                                  |
