@@ -5,7 +5,7 @@ html (which I am not that great at, but managed to make my own personal website 
 I highly encourage you to try playing the game rather than looking through the code first! This 
 took me a long time to make and I am happy with how it has ended up. There are a lot of things which 
 I would like to add but could not do with the time given and my current knowlege. For a list of variables 
-and more info on how this program works, please visit the README.md file. (if I get that done lol)
+and more info on how this program works, please visit the README.md file. (if I get that done lol (UPDATE: I DID! wow look at me, finally documenting stuff.))
 
 Enjoy!!!
 -Justin
@@ -25,7 +25,7 @@ objects_room1 = [bookshelf, table, notebook, fountain_pen, inkwell, chair, piano
 objects_staircase = []
 objects_concrete_room = [grate]
 
-def update_objs(): 
+def update_objs(): #updates objects and their locations. also remakes the objects_currentloc list
     global objects_room1, objects_staircase, objects_conctete_room, objects_currentloc
     piano.played()
     
@@ -69,7 +69,7 @@ class Location:
         self.title = title
         self.print_look = print_look
 ########## INITIALIZE MAP ##########
-def updatemap():
+def updatemap(): #probably do not need this in a function
     global locations
 
     locations = {
