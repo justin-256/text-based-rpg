@@ -1,6 +1,6 @@
 # Silent Key
 ## My first python program (kinda)
-For a while now I have been trying to learn programming, but never really got around to it. I always ended up trying and then giving up shortly later. It was only when the programming unit in school came around that I decided to take it seriously. For my unit project, I decided that I wanted to do something that would help me learn about more advanced methods such as object-oriented programming. I figured I would do something that I had been interested in for a while: **A text based game.**
+For a while now I have been trying to learn programming, but never really got around to it. I always ended up trying and then giving up shortly later. It was only when the programming unit in school came around that I decided to take it seriously. For my unit project, I decided that I wanted to do something that would help me learn about more advanced methods such as object-oriented programming. I figured I would do something that I had been interested in for a while: **A text based game.** Half way through making it I was tapping on my desk and accidentally tapped "SK" in morse code, which means "Silent Key". It is used when a morse radio operator passes away, to signal that their key will be "silent" (no longer transmitting).
 
 ## How to run the program:
 #### With IDE:
@@ -19,29 +19,29 @@ The program asks the user for a command and then cycles through, checking if it 
 
 ### Functions:
 #### Basic functions:
-|Function:                |Description:                                             |
-|-------------------------|---------------------------------------------------------|
-|`update_objs()          `|Updates objects and sets up the `objects_currentloc` list|
+|Function:                |Description:                                                                           |
+|-------------------------|---------------------------------------------------------------------------------------|
+|`update_objs()          `|Updates objects and sets up the `objects_currentloc` list                              |
 |`updatemap()            `|Updates the map locations (probbly could just remove the function, probably not needed)|
-|`locstr()               `|Returns the current coordinates in string form, used in other functions|
-|`lightlevel()           `|Returns light level of the current location|
-|`game_end(cause)        `|Ends the game and prints message depending on `cause`|
-|`trigger(cause)         `|Used to trigger things when player is at a cartain location|
-|`helptxt()              `|Prints out the commands|
-|`printinv()             `|Prints inventory contents|
-|`quit()                 `|Quits the game|
-|`look()                 `|Prints surrounding objects|
-|`examine(item)          `|Gives closer look at item|
-|`move(item)             `|Moves item (This did not really get used and is too vague. More trouble than good!)|
-|`play(arg)              `|Plays an instrument (the piano!)|
-|`pull(item)             `|Pulls on object|
-|`navigation(direction)  `|Accepts the nsew commands and moves player|
-|`take(item)             `|Adds item to players inventory and removes it from environment|
-|`put(item, location)    `|Adds item to container (DOES NOT CHECK IF CONTAINER IS OPEN! BUG)|
-|`activate(action, item) `|Turns on an item (like a light!)|
-|`openclose(item, action)`|Opens or closes container|
-|`read(item)             `|Opens the read dialogue for literature|
-|`end()                  `|Prints the end of the game (credits?)|
+|`locstr()               `|Returns the current coordinates in string form, used in other functions                |
+|`lightlevel()           `|Returns light level of the current location                                            |
+|`game_end(cause)        `|Ends the game and prints message depending on `cause`                                  |
+|`trigger(cause)         `|Used to trigger things when player is at a cartain location                            |
+|`helptxt()              `|Prints out the commands                                                                |
+|`printinv()             `|Prints inventory contents                                                              |
+|`quit()                 `|Quits the game                                                                         |
+|`look()                 `|Prints surrounding objects                                                             |
+|`examine(item)          `|Gives closer look at item                                                              |
+|`move(item)             `|Moves item (This did not really get used and is too vague. More trouble than good!)    |
+|`play(arg)              `|Plays an instrument (the piano!)                                                       |
+|`pull(item)             `|Pulls on object                                                                        |
+|`navigation(direction)  `|Accepts the nsew commands and moves player                                             |
+|`take(item)             `|Adds item to players inventory and removes it from environment                         |
+|`put(item, location)    `|Adds item to container (DOES NOT CHECK IF CONTAINER IS OPEN! BUG)                      |
+|`activate(action, item) `|Turns on an item (like a light!)                                                       |
+|`openclose(item, action)`|Opens or closes container                                                              |
+|`read(item)             `|Opens the read dialogue for literature                                                 |
+|`end()                  `|Prints the end of the game (credits?)                                                  |
 #### Functions in classes:
 Next section!
 

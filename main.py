@@ -20,7 +20,6 @@ inventory = [] #setup player inventory
 
 z = 1 #set player z coordinate
 
-
 ########## SETUP ITEM LOCATION DEFAULTS ##########
 objects_room1 = [bookshelf, table, notebook, fountain_pen, inkwell, chair, piano, lantern, lamp, book]
 objects_staircase = []
@@ -438,7 +437,6 @@ while __name__ == "__main__":
             if action == "start":
                 game_running = True
                 player_location = [1,1]
-    
                 
     #setup for the main loop:
     look()
@@ -538,4 +536,3 @@ while __name__ == "__main__":
     
         elif action[0] == "read":
             read(arg)
-            

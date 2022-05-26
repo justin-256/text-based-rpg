@@ -22,19 +22,19 @@ class Object:
         self.can_pull = can_pull
         self.name = name
 
-    def desc(self): #return correct description depending on if it is moved
+    def desc(self): #return correct description depending on if it is moved for look command
         if self.has_moved == True:
             return self.moved_description
         else:
             return self.description
             
-    def exam(self):
+    def exam(self): #examine
         if self.has_moved == True:
             return self.examine_description_moved
         else:
             return self.examine_description
 
-    def special_function(self, action):
+    def special_function(self, action): #special unique function
         special_items_list = [book]
         if self not in special_items_list:
             return False
@@ -43,7 +43,7 @@ class Object:
                 print(textwrap.fill(text.book_pull, width))
                 bookshelf.has_moved = True
     
-class Container(Object):
+class Container(Object): #container class
     def __init__(self, description, moved_description, examine_description, examine_description_moved, move, take, pull, can_move, can_take, can_pull, name, contents, open, can_open, see_contents):
         super().__init__(description, moved_description, examine_description, examine_description_moved, move, take, pull, can_move, can_take, can_pull, name)
         self.contents = contents
@@ -54,7 +54,7 @@ class Container(Object):
         self.see_contents = see_contents
                 
     def contains(self, examine = False): #print out contents
-        if self.see_contents == False and examine == False: #return if you cant see the contents
+        if self.see_contents == False and examine == False: #return if you can't see the contents
             return self.description[0] + ". "
         elif len(self.contents) == 0:
             return self.description[0] + ". "
