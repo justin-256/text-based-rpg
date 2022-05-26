@@ -454,8 +454,6 @@ while __name__ == "__main__":
             print(locstr())
             print(lightlevel())
         updatemap() #update the map 
-
-        print(dir())
         
         action = input("\n> ").lower().split() #player input
 
