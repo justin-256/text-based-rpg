@@ -256,7 +256,7 @@ def navigation(direction): #move around n s w or w
             player_location = (locations[x].l_north)[:-1]
             z = (locations[x].l_north)[-1]
         else:
-            print("You cant go there!")
+            print("You can't go there!")
             
     if direction in ["south", "s"]:
         if locations[x].m_south == True:
@@ -269,7 +269,7 @@ def navigation(direction): #move around n s w or w
             player_location = (locations[x].l_south)[:-1]
             z = (locations[x].l_south)[-1]
         else:
-            print("You cant go there!")
+            print("You can't go there!")
             
     if direction in ["east", "e"]:
         if locations[x].m_east == True:
@@ -282,7 +282,7 @@ def navigation(direction): #move around n s w or w
             player_location = (locations[x].l_east)[:-1]
             z = (locations[x].l_east)[-1]
         else:
-            print("You cant go there!")
+            print("You can't go there!")
             
     if direction in ["west", "w"]:
         if locations[locstr()].m_west == True:
@@ -295,7 +295,7 @@ def navigation(direction): #move around n s w or w
             player_location = (locations[x].l_west)[:-1]
             z = (locations[x].l_west)[-1]
         else:
-            print("You cant go there!")
+            print("You can't go there!")
     updatemap()
     if locations[locstr()].print_look == True:
         look()
