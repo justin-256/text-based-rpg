@@ -1,8 +1,10 @@
 # SilentKey
 ## My first python program (kinda)
-For a while now I have been trying to learn programming, but never really got around to it. I always ended up trying and then giving up shortly later. It was only when the programming unit in school came around that I decided to take it seriously. For my unit project, I decided that I wanted to do something that would help me learn about more advanced methods such as object-oriented programming (and also markdown!). 
+For a while now I have been trying to learn programming, but never really got around to it. I always ended up trying and then giving up shortly later. It was only when the programming unit in school came around that I decided to take it seriously. For my unit project, I decided that I wanted to do something that would help me learn about more advanced methods such as object-oriented programming (and also markdown!). I started programming on the site we had been using to make it easier to hand in, but codehs decided to start crashing at the large number of lines. That's why I moved over to repl.it*. This also gave me a nice way for other people to run the program when testing it.
 
 I figured I would do something that I had been interested in for a while: **A text based game.** Half way through making it I was tapping on my desk and accidentally tapped "SK" in morse code, which means "Silent Key". It is used when a morse radio operator passes away, to signal that their key will be "silent" (no longer transmitting). Before this the only name I had for the game was terrible, so I figured I would use SilentKey instead.
+
+>*Yes I used repl.it, it was the most convenient for the computer I use at school. It is not what *should* be used, and it adds a crap ton of random crap files which are a bit annoying.
 
 ## How to run the program:
 #### With IDE:
