@@ -14,6 +14,10 @@ _examine: text for when item is examined
 _examine_moved: text for when item is examined if object has been moved
 _take: text for when taken, even if you can not take it
 _move: text for when moving, even if you can not move it
+_pull: text for when pulling, even if you can not pull it
+_take: text for when taking, even if you can not take it
+look_:print at start of look depending on location. This is because not everything is in a class
+
 """
 #################################################
 

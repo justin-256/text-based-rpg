@@ -9,3 +9,5 @@ if developer_mode == True:
 else:
     game_running = False
     player_location = ["menu"]
+
+#yes this should be a json or similar with no code. I was in a hurry and did not bother. there are not many things here, but in the future that is a must.

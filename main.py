@@ -61,7 +61,7 @@ class Location:
         self.l_south = l_south
         self.l_east = l_east
         self.l_west = l_west        
-        self.t_north = t_north #text to orint when moving
+        self.t_north = t_north #text to print when moving
         self.t_south = t_south
         self.t_east = t_east
         self.t_west = t_west
