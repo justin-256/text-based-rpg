@@ -1,3 +1,11 @@
+UPDATE: This program is well, bad. There are so many glitches, bugs and errors. I don't recommend getting a lot of inspiration or ideas from this repo. I started on another text RPG with saving, better programming, a GUI, possible multiplayer and a much better file structure, though currently work on it is slow because I have not had the motivation. I am not great at stories. I have a setting I want, a small town in the mountains with a paper mill based on where my grandfather grew up, but I do not know how to tell the story or how it will go. This project was mainly written by a friend of mine. I wrote the basic lines and he made them far better while giving me suggestions. Version two would be far bigger, and I feel he would not want to write all that (I don't blame him!). So for now, take this repo as an example of my past capabilities.
+
+
+
+---
+
+
+
 # SilentKey
 ## My first python program (kinda)
 For a while now I have been trying to learn programming, but never really got around to it. I always ended up trying and then giving up shortly later. It was only when the programming unit in school came around that I decided to take it seriously. For my unit project, I decided that I wanted to do something that would help me learn about more advanced methods such as object-oriented programming (and also markdown!). I started programming on the site we had been using to make it easier to hand in, but codehs decided to start crashing at the large number of lines. That's why I moved over to repl.it*. This also gave me a nice way for other people to run the program when testing it.
